@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recorder:ActionFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:recorder="http://www.workfusion.com/recorder/v2.0.0" ignoreDelays="false">
+  <variables/>
+  <actions xsi:type="recorder:LaunchAppAction" active="true" actionDetails="(C:\Windows\System32\...; wait for 0ms; poll every 0ms)" delay="0" command="C:\Windows\System32\calc1.exe" autoDetectWindow="true"/>
+  <actions xsi:type="recorder:SwitchWindowAction" active="true" actionDetails="(Calculator)" delay="0" clazz="CalcFrame" title="Calculator" actions="" timeoutMs="0" modeType="SELECTED"/>
+  <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" selector="[CLASS:Button; NAME:Clear]" type="CONTROL" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+  <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" selector="[CLASS:Button; NAME:1]" type="CONTROL" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+  <actions xsi:type="recorder:MouseClickAction" active="true" actionDetails="(click left button)" delay="0" selector="[CLASS:Button; NAME:Sine]" type="CONTROL" searchInFrames="false" webElementLocatorType="XPATH" exactMatch="true" button="1"/>
+  <actions xsi:type="recorder:WaitAction" active="true" actionDetails="for 10000 ms" delay="10000"/>
+</recorder:ActionFlow>

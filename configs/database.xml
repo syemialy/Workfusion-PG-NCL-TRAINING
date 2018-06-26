@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<config xmlns="http://web-harvest.sourceforge.net/schema/1.0/config" scriptlang="groovy">
+	
+	<database connection="jdbc:sqlserver://hostname:6501;DatabaseName=database"
+          jdbcclass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+          username="user" password="securepassword">
+ 
+    select first_name from actor
+	</database>
+
+    <export include-original-data="true"></export>
+
+</config>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://web-harvest.sourceforge.net/schema/1.0/config" scriptlang="groovy">
+	
+	<!-- assigning value to a variable -->
+	<var-def name="httpTranslateResponse_xml">
+		<!-- conert response to true xml -->
+		<html-to-xml omitunknowntags="false">
+			<!-- Remote Rest Service call -->
+	    	<http-extended url="https://api.microsofttranslator.com/V2/Http.svc/Translate" method="GET">
+	    		<http-header-extended name="Ocp-Apim-Subscription-Key"><template>83ffa3bd24bf4f75aa0814c3713bd0d4</template></http-header-extended>
+	    		<http-param-extended name="text"><template>${phrase}</template></http-param-extended>
+	    		<http-param-extended name="from"><template>${language_from}</template></http-param-extended>
+	    		<http-param-extended name="to"><template>en</template></http-param-extended>
+	    	</http-extended>
+    	</html-to-xml>
+	</var-def>
+	
+	<var-def name="translation">
+		<xpath expression="//string/text()">
+			<var name="httpTranslateResponse_xml"/>
+		</xpath>
+	</var-def>
+	
+    <export include-original-data="true">
+    	<single-column name="translation" value="${translation}"/>
+    </export>
+
+</config>
